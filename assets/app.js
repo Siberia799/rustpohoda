@@ -1,13 +1,13 @@
 // Rust Pohoda — static site JS (SK only)
 
-const CONNECT_LINK = "steam://rungameid/252490//+connect%20203.16.163.84:24789";
+const CONNECT_LINK = "steam://run/252490//+connect%20203.16.163.84:24790";
 
 const DEFAULT_CONFIG = {
   serverName: "Rust Pohoda",
   tagline: "SLOVENSKÝ VANILLA SERVER",
   footerLine: "Rust Pohoda • Vanilla • Quad",
   serverIP: "203.16.163.84:24789",
-  connectLink: "steam://connect/203.16.163.84:24789",
+  connectLink: "steam://run/252490//+connect%20203.16.163.84:24790",
   wipe: "Monthly – každý prvý štvrtok v mesiaci o 20:00",
   mode: "Vanilla",
   teamLimit: "Quad (max 4)",
