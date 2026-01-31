@@ -318,7 +318,11 @@ async function initGallery() {
   document.addEventListener("keydown", (e)=>{ if(e.key==="Escape") close(); });
 }
 
+
+
+
 (async function main(){
+  document.body.classList.add('wipe-pre');
   const config = await loadConfig();
   await initCommon(config);
 
@@ -327,6 +331,7 @@ async function initGallery() {
     await initHome(config);
     await renderMarkdownInto("#mdHome", mdPathFor("home"));
     startWipeCountdown();
+    
   }
   if (page === "rules") {
     await renderMarkdownInto("#mdRules", mdPathFor("rules"));

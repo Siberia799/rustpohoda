@@ -559,3 +559,120 @@ header .brand img {
   color: #ff8c00;
   font-weight: 1000;
 }
+
+
+
+/* ===== Rust hero background ===== */
+.hero{
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.65), rgba(0,0,0,.9)),
+    url('/assets/hero-rust.jpg') center/cover no-repeat;
+}
+.hero .card{
+  background: linear-gradient(180deg, rgba(25,18,12,.85), rgba(10,8,6,.95));
+}
+
+
+/* ===== Hero text animation ===== */
+@keyframes heroIn{
+  from{ transform: translateY(10px); opacity: 0; }
+  to{ transform: translateY(0); opacity: 1; }
+}
+@keyframes glowPulse{
+  0%,100%{ text-shadow: 0 0 14px rgba(255,140,0,.28); }
+  50%{ text-shadow: 0 0 26px rgba(255,140,0,.42); }
+}
+.hero h1, .hero .tagline{
+  animation: heroIn 700ms ease-out both;
+}
+.hero .tagline{
+  animation-delay: 80ms;
+}
+.hero h1{
+  animation-delay: 0ms;
+  animation-name: heroIn, glowPulse;
+  animation-duration: 700ms, 3.2s;
+  animation-timing-function: ease-out, ease-in-out;
+  animation-iteration-count: 1, infinite;
+}
+
+/* Brand sizing for SVG */
+header .brand img{
+  height: 44px;
+  width: auto;
+}
+
+
+/* ===== Background changes by wipe phase ===== */
+body.wipe-pre .hero{
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.62), rgba(0,0,0,.9)),
+    url('/assets/hero-rust.jpg') center/cover no-repeat;
+}
+body.wipe-soon .hero{
+  background:
+    radial-gradient(circle at top, rgba(255,140,0,.20), rgba(0,0,0,.92)),
+    url('/assets/hero-rust.jpg') center/cover no-repeat;
+}
+body.wipe-today .hero{
+  background:
+    radial-gradient(circle at top, rgba(255,70,0,.28), rgba(0,0,0,.94)),
+    url('/assets/hero-rust.jpg') center/cover no-repeat;
+}
+
+/* Subtle accent for cards on wipe day */
+body.wipe-today .card{
+  border-color: rgba(255,90,0,.28);
+  box-shadow: 0 0 0 1px rgba(255,90,0,.10), 0 10px 40px rgba(0,0,0,.35);
+}
+
+
+
+/* ===== Sidebar stack (wipe + stats) ===== */
+.sidebar-stack{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+@media (min-width: 980px){
+  .hero .container > .sidebar-stack{
+    grid-column: 2;
+    position: sticky;
+    top: 88px;
+  }
+  /* disable sticky on individual cards if present */
+  .hero .container > .card.side-card{ position: static !important; top: auto !important; }
+}
+
+/* BattleMetrics mini grid responsive */
+.bm-mini-grid{
+  grid-template-columns: repeat(2, minmax(0,1fr));
+}
+@media (min-width: 980px){
+  .bm-mini-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); }
+}
+
+
+/* ===== Rules list look ===== */
+.content ul{
+  padding-left: 0;
+  margin-left: 0;
+  list-style: none;
+}
+.content li{
+  padding: 12px 12px 12px 14px;
+  border-radius: 14px;
+  background: rgba(0,0,0,.18);
+  border: 1px solid rgba(255,255,255,.08);
+}
+.content li + li{ margin-top: 10px; }
+.content li::before{
+  content: "";
+  display:inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255,140,0,.95);
+  margin-right: 10px;
+  transform: translateY(-1px);
+}
