@@ -5,7 +5,7 @@ const DEFAULT_CONFIG = {
   tagline: "SLOVENSKÝ VANILLA SERVER",
   footerLine: "Rust Pohoda • Vanilla • Quad",
   serverIP: "203.16.163.84:24789",
-  connectLink: "steam://connect/203.16.163.84:24789",
+  connectLink: "steam://run/252490//+connect 203.16.163.84:24789",
   wipe: "Monthly – každý prvý štvrtok v mesiaci o 20:00",
   mode: "Vanilla",
   teamLimit: "Quad (max 4)",
