@@ -352,3 +352,38 @@ async function initGallery() {
     await initGallery();
   }
 })();
+
+
+// === BIND_ALL_IDS_FIX ===
+// Bind click handlers to ALL matches (guards against duplicate IDs from cached HTML).
+document.addEventListener("DOMContentLoaded", () => {
+  try {
+    const bindAll = (selector, fn) => {
+      document.querySelectorAll(selector).forEach(el => el.addEventListener("click", fn));
+    };
+
+    bindAll("#btnCopyIP", (e) => {
+      e.preventDefault();
+      const ipEl = document.getElementById("ipInline");
+      const ip = ipEl ? ipEl.textContent.trim() : "";
+      if (ip) copyText(ip);
+    });
+
+    bindAll("#btnJoinTop", (e) => {
+      const href = e.currentTarget.getAttribute("href") || "";
+      if (href.trim() === "#" || href.trim() === "") {
+        e.preventDefault();
+        loadConfig().then(cfg => { if (cfg?.connectLink) location.href = cfg.connectLink; });
+      }
+      // otherwise let the steam:// link open normally
+    });
+
+    bindAll("#btnConnect", (e) => {
+      const href = e.currentTarget.getAttribute("href") || "";
+      if (href.trim() === "#" || href.trim() === "") {
+        e.preventDefault();
+        loadConfig().then(cfg => { if (cfg?.connectLink) location.href = cfg.connectLink; });
+      }
+    });
+  } catch {}
+});

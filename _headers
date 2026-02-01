@@ -10,3 +10,9 @@
 
 /gallery/*
   Cache-Control: public, max-age=604800
+
+/*.html
+  Cache-Control: no-store
+
+/
+  Cache-Control: no-store
