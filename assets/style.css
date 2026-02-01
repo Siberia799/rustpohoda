@@ -49,4 +49,61 @@ body.wipe-today .hero::before{
   background:
     linear-gradient(180deg, rgba(0,0,0,.58), rgba(0,0,0,.82)),
     radial-gradient(900px 420px at 30% 0%, rgba(255,70,0,.22), transparent 55%);
+  /* =========================================================
+   GLOBAL BACKGROUND — SAME ON HOME / RULES / GALLERY
+   (single source of truth, no double backgrounds)
+========================================================= */
+
+/* nechaj pôvodný gradient z body, ale pozadie s obrázkom rieš cez pseudo-element */
+body{
+  position: relative;
+}
+
+/* samotný obrázok (fixed, rovnaký na všetkých stránkach) */
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+
+  background: url('/assets/bg.jpg?v=2') center/cover no-repeat;
+  /* jemné doladenie, aby to nebolo "tvrdé" */
+  filter: saturate(1.05) contrast(1.05);
+  transform: scale(1.02); /* drobný overscan proti okrajom */
+}
+
+/* tmavý overlay nad obrázkom (aby bol text čitateľný) */
+body::after{
+  content:"";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    radial-gradient(1200px 700px at 20% 10%, rgba(240,140,0,.12), transparent 55%),
+    radial-gradient(1200px 700px at 80% 20%, rgba(255,180,87,.06), transparent 60%),
+    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.88));
+}
+
+/* HERO už nemá vlastný obrázok — iba jemný overlay */
+.hero{
+  background: transparent;
+  position: relative;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+
+  /* lokálne stmavenie hera, aby CTA bola čitateľná */
+  background: linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.35));
+}
+.hero > *{ position: relative; z-index: 1; }
+
+/* wipe fázy menia iba overlay (obrázok je stále ten istý) */
+body.wipe-pre  .hero::before{ background: linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.32)); }
+body.wipe-soon .hero::before{ background: linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.28)); }
+body.wipe-today .hero::before{ background: linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.24)); }
+
 }
