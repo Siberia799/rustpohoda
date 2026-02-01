@@ -479,7 +479,7 @@ hr.sep{border:0; border-top:1px solid rgba(255,255,255,.08); margin:16px 0}
 
 /* ===== Rust visual upgrade ===== */
 body {
-  background: url('/assets/bg.jpg') center/cover fixed no-repeat;
+  background: url('/assets/bg.jpg?v=2') center/cover fixed no-repeat;
 }
 
 .overlay {
@@ -566,7 +566,7 @@ header .brand img {
 .hero{
   background:
     linear-gradient(180deg, rgba(0,0,0,.65), rgba(0,0,0,.9)),
-    url('/assets/bg.jpg') center/cover no-repeat;
+    url('/assets/bg.jpg?v=2') center/cover no-repeat;
 }
 .hero .card{
   background: linear-gradient(180deg, rgba(25,18,12,.85), rgba(10,8,6,.95));
@@ -607,17 +607,17 @@ header .brand img{
 body.wipe-pre .hero{
   background:
     linear-gradient(180deg, rgba(0,0,0,.62), rgba(0,0,0,.9)),
-    url('/assets/bg.jpg') center/cover no-repeat;
+    url('/assets/bg.jpg?v=2') center/cover no-repeat;
 }
 body.wipe-soon .hero{
   background:
     radial-gradient(circle at top, rgba(255,140,0,.20), rgba(0,0,0,.92)),
-    url('/assets/bg.jpg') center/cover no-repeat;
+    url('/assets/bg.jpg?v=2') center/cover no-repeat;
 }
 body.wipe-today .hero{
   background:
     radial-gradient(circle at top, rgba(255,70,0,.28), rgba(0,0,0,.94)),
-    url('/assets/bg.jpg') center/cover no-repeat;
+    url('/assets/bg.jpg?v=2') center/cover no-repeat;
 }
 
 /* Subtle accent for cards on wipe day */
