@@ -3,7 +3,7 @@
 Vanilla Rust server pre hráčov, ktorí chcú pohodu, férový gameplay a žiadne P2W.
 Zamerané na SK komunitu, stabilný chod a čistý vanilla zážitok.
 
----
+
 
 ## Pripojenie
 - IP: 203.16.163.84:24789
@@ -22,18 +22,18 @@ Pridaj sa na Discord: https://discord.com/invite/4eY75AnPCj
 - minimum zásahov do gameplaya
 - príjemná atmosféra bez toxického správania
 
----
+
 
 ## FAQ
 
-### Kedy je wipe?
+Kedy je wipe?
 Monthly – každý prvý štvrtok v mesiaci o 20:00.
 
-### Aký je limit tímu?
+Aký je limit tímu?
 Max. 4 hráči (Quad).
 
-### Prečo musím mať verejný Steam profil?
+Prečo musím mať verejný Steam profil?
 Kvôli overeniu hodín a fair play.
 
-### Ako nahlásim cheatera / bug?
+Ako nahlásim cheatera / bug?
 Najlepšie cez Discord, ideálne s videom alebo screenshotom.
