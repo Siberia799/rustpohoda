@@ -4,9 +4,9 @@ Vanilla Rust server pro hráče, kteří chtějí **pohodu, férový gameplay a 
 Zaměřeno na CZ/SK komunitu, stabilní chod a čistý vanilla zážitek.
 
 ## 🔗 Připojení
-**IP:** 203.16.163.84:24789  
+**IP:** 185.180.2.15:28915
 **Typ:** Vanilla  
-**Max tým:** Quad  
+**Max tým:** 3(Trio)  
 
 ## 🔄 Wipe
 **Monthly wipe** – každý **první čtvrtek v měsíci ve 20:00**
@@ -26,7 +26,7 @@ Přidej se na Discord: https://discord.com/invite/4eY75AnPCj
 Monthly – každý **první čtvrtek v měsíci ve 20:00**.
 
 **Jaký je limit týmu?**  
-Max. **4 hráči (Quad)**.
+Max. **3 hráči (Trio)**.
 
 **Proč musím mít veřejný Steam profil?**  
 Kvůli ověření hodin a fair play.
