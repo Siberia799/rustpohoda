@@ -1,9 +1,9 @@
 # Pravidla serveru CZ/SK Rust Pohoda
 
-> Neznalost pravidel neomlouvá. **Team limit: 4 (Quad)** • **Max. hodiny týmu: 10 000**
+> Neznalost pravidel neomlouvá. **Team limit: 3 (Trio)** • **Max. hodiny týmu: 10 000**
 
-## 1️⃣ Maximální počet hráčů v týmu – 4
-Jeden tým může mít maximálně **4 aktivní členy**.
+## 1️⃣ Maximální počet hráčů v týmu – 3
+Jeden tým může mít maximálně **3 aktivní členy**.
 
 ## 2️⃣ Maximálně 10 000 hodin (tým)
 Součet herních hodin všech členů týmu nesmí přesáhnout **10 000 hodin**.
